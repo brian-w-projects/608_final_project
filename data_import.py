@@ -82,7 +82,7 @@ with app.app_context():
         next(file)
         for row in csv.reader(file):
             try:
-                if datetime.strptime(row[2], '%Y') >= datetime.strptime(2015, '%Y'):
+                if datetime.strptime(row[2], '%Y') >= datetime.strptime('2015', '%Y'):
                     break
                 p = Populations(id=int(row[0]), county_id=int(row[1]), year=datetime.strptime(row[2], '%Y'),
                                 population=int(row[3]))
