@@ -82,6 +82,8 @@ with app.app_context():
         next(file)
         for row in csv.reader(file):
             try:
+                if datetime.strptime(row[2], '%Y') >= 2015:
+                    break
                 p = Populations(id=int(row[0]), county_id=int(row[1]), year=datetime.strptime(row[2], '%Y'),
                                 population=int(row[3]))
                 db.session.add(p)
