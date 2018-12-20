@@ -1,1 +1,2 @@
-# 608_final_project
+# flask_setup
+My preferred flask setup for new projects

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon/favicon.ico') }}"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="{{ url_for('static', filename='fontawesome/css/font-awesome.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='progress/nprogress.css') }}" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.3.1/css/bootstrap-slider.min.css"/>
+  <link href="{{ url_for('static', filename='main/index.css') }}" rel="stylesheet"/>
+  <title>Brian Weinfeld's 608 Final Project</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="col-12">
+      <div class="jumbotron">
+        <h2>United States Metro Area Population Analyzer</h2>
+        <h4>2010-2017</h4>
+        <h5>By Brian Weinfeld</h5>
+      </div>
+    </div>
+    <div class="col-12">
+      <form method="POST">
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="fa fa-filter fa-2x"></i></div>
+            </div>
+            <input class="form-control form-control-lg" id="metro-filter" placeholder="Filter"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class='col-form-label col-form-label-lg' for="metro-select">Select Counties:
+            <span id="metro-remaining">6</span> remaining
+          </label>
+          <select class='form-control form-control-lg' id="metro-select" name="metro-select" multiple size="10">
+            {% for ele in metros %}
+              <option value="{{ ele['id'] }}">{{ ele['metro'] }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <button id='submit' type="submit" class="btn btn-primary btn-block" disabled>Display</button>
+      </form>
+    </div>
+  </div>
+  <br/>
+  <br/>
+  <div class="container-fluid">
+    <div class="col-12">
+      <div id="viz">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-4 col-4">
+        <input id="year-slider" type="text"
+          data-provide="slider"
+          data-slider-ticks="[2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017]"
+          data-slider-ticks-labels='["2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017"]'
+          data-slider-min="2010"
+          data-slider-max="2017"
+          data-slider-step="1"
+          data-slider-value="2010"
+          data-slider-tooltip="hide"
+          data-slider-enabled="false"/>
+      </div>
+    </div>
+    <div id="circle-plots">
+      <div class="row">
+
+      </div>
+    </div>
+    <div id="map">
+
+    </div>
+  </div>
+  {{ moment.include_jquery() }}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.3.1/bootstrap-slider.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="{{ url_for('static', filename='progress/nprogress.js') }}"></script>
+  {{ moment.include_moment() }}
+  <script src="{{ url_for('static', filename='main/index.js') }}"></script>
+  <script src="{{ url_for('static', filename='main/plotCreator.js') }}"></script>
+</body>
+</html>
