@@ -114,6 +114,11 @@
               <item name="US-Metro-Data-With-Plotly" type="b2602c69:ProjectViewProjectNode" />
               <item name="US-Metro-Data-With-Plotly" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="US-Metro-Data-With-Plotly" type="b2602c69:ProjectViewProjectNode" />
+              <item name="US-Metro-Data-With-Plotly" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -254,12 +259,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540570448682</updated>
-      <workItem from="1557881212465" duration="1443000" />
+      <workItem from="1557881212465" duration="1717000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1443000" />
+    <option name="totallyTimeSpent" value="1717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2567" y="-7" width="2062" height="1126" extended-state="6" />
@@ -381,6 +386,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-629">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/metros.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="382" selection-start-line="382" selection-end-line="382" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/metros_counties.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="1165" selection-start-line="1165" selection-end-line="1165" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/populations.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="25121" selection-start-line="25121" selection-end-line="25121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/states.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/counties.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="3142" selection-start-line="3142" selection-end-line="3142" />
         </state>
       </provider>
     </entry>
